@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Videoverwaltung.GUI
 {
@@ -14,9 +15,11 @@ namespace Videoverwaltung.GUI
         [STAThread]
         static void Main()
         {
+            string basepath = ConfigurationManager.AppSettings["Basepath"];
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            Application.Run(new FormMain(basepath));
         }
     }
 }

@@ -21,9 +21,11 @@ namespace Videoverwaltung.Resources
             this.GenreName = Path.GetFileName(genrePath);
             this.movies = new List<Movie>();
             this.genrePath = genrePath;
+            Movie movie = null;
             foreach(string moviedir in Directory.EnumerateDirectories(genrePath))
             {
-
+                movie = new Movie(moviedir);
+                this.movies.Add(movie);
             }
         }
 

@@ -35,25 +35,25 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.StatusLabelUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.listViewMovie = new System.Windows.Forms.ListView();
-            this.groupBoxGenre = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.radioButtonDrama = new System.Windows.Forms.RadioButton();
-            this.radioButtonThriller = new System.Windows.Forms.RadioButton();
-            this.radioButtonAction = new System.Windows.Forms.RadioButton();
-            this.radioButtonKinder = new System.Windows.Forms.RadioButton();
-            this.radioButtonDoku = new System.Windows.Forms.RadioButton();
+            this.groupBoxGenre = new System.Windows.Forms.GroupBox();
             this.radioButtonKrimi = new System.Windows.Forms.RadioButton();
+            this.radioButtonDoku = new System.Windows.Forms.RadioButton();
+            this.radioButtonKinder = new System.Windows.Forms.RadioButton();
+            this.radioButtonAction = new System.Windows.Forms.RadioButton();
+            this.radioButtonThriller = new System.Windows.Forms.RadioButton();
+            this.radioButtonDrama = new System.Windows.Forms.RadioButton();
+            this.listViewMovie = new System.Windows.Forms.ListView();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            this.groupBoxGenre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBoxGenre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -78,7 +78,7 @@
             // 
             this.MenuItemExit.Name = "MenuItemExit";
             this.MenuItemExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.MenuItemExit.Size = new System.Drawing.Size(180, 22);
+            this.MenuItemExit.Size = new System.Drawing.Size(134, 22);
             this.MenuItemExit.Text = "Exit";
             this.MenuItemExit.Click += new System.EventHandler(this.MenuItemExit_Click);
             // 
@@ -117,24 +117,13 @@
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 2;
             // 
-            // axWindowsMediaPlayer1
+            // pictureBox1
             // 
-            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(530, 404);
-            this.axWindowsMediaPlayer1.TabIndex = 0;
-            // 
-            // listViewMovie
-            // 
-            this.listViewMovie.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listViewMovie.Location = new System.Drawing.Point(0, 91);
-            this.listViewMovie.Name = "listViewMovie";
-            this.listViewMovie.Size = new System.Drawing.Size(266, 313);
-            this.listViewMovie.TabIndex = 0;
-            this.listViewMovie.UseCompatibleStateImageBehavior = false;
+            this.pictureBox1.Location = new System.Drawing.Point(145, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 92);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // groupBoxGenre
             // 
@@ -151,57 +140,16 @@
             this.groupBoxGenre.TabStop = false;
             this.groupBoxGenre.Text = "Genre";
             // 
-            // pictureBox1
+            // radioButtonKrimi
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(145, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 92);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // radioButtonDrama
-            // 
-            this.radioButtonDrama.AutoSize = true;
-            this.radioButtonDrama.Location = new System.Drawing.Point(0, 19);
-            this.radioButtonDrama.Name = "radioButtonDrama";
-            this.radioButtonDrama.Size = new System.Drawing.Size(56, 17);
-            this.radioButtonDrama.TabIndex = 0;
-            this.radioButtonDrama.TabStop = true;
-            this.radioButtonDrama.Text = "Drama";
-            this.radioButtonDrama.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonThriller
-            // 
-            this.radioButtonThriller.AutoSize = true;
-            this.radioButtonThriller.Location = new System.Drawing.Point(62, 19);
-            this.radioButtonThriller.Name = "radioButtonThriller";
-            this.radioButtonThriller.Size = new System.Drawing.Size(56, 17);
-            this.radioButtonThriller.TabIndex = 1;
-            this.radioButtonThriller.TabStop = true;
-            this.radioButtonThriller.Text = "Thriller";
-            this.radioButtonThriller.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonAction
-            // 
-            this.radioButtonAction.AutoSize = true;
-            this.radioButtonAction.Location = new System.Drawing.Point(1, 42);
-            this.radioButtonAction.Name = "radioButtonAction";
-            this.radioButtonAction.Size = new System.Drawing.Size(55, 17);
-            this.radioButtonAction.TabIndex = 2;
-            this.radioButtonAction.TabStop = true;
-            this.radioButtonAction.Text = "Action";
-            this.radioButtonAction.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonKinder
-            // 
-            this.radioButtonKinder.AutoSize = true;
-            this.radioButtonKinder.Location = new System.Drawing.Point(62, 42);
-            this.radioButtonKinder.Name = "radioButtonKinder";
-            this.radioButtonKinder.Size = new System.Drawing.Size(55, 17);
-            this.radioButtonKinder.TabIndex = 3;
-            this.radioButtonKinder.TabStop = true;
-            this.radioButtonKinder.Text = "Kinder";
-            this.radioButtonKinder.UseVisualStyleBackColor = true;
+            this.radioButtonKrimi.AutoSize = true;
+            this.radioButtonKrimi.Location = new System.Drawing.Point(62, 65);
+            this.radioButtonKrimi.Name = "radioButtonKrimi";
+            this.radioButtonKrimi.Size = new System.Drawing.Size(47, 17);
+            this.radioButtonKrimi.TabIndex = 5;
+            this.radioButtonKrimi.TabStop = true;
+            this.radioButtonKrimi.Text = "Krimi";
+            this.radioButtonKrimi.UseVisualStyleBackColor = true;
             // 
             // radioButtonDoku
             // 
@@ -214,16 +162,68 @@
             this.radioButtonDoku.Text = "Doku";
             this.radioButtonDoku.UseVisualStyleBackColor = true;
             // 
-            // radioButtonKrimi
+            // radioButtonKinder
             // 
-            this.radioButtonKrimi.AutoSize = true;
-            this.radioButtonKrimi.Location = new System.Drawing.Point(62, 65);
-            this.radioButtonKrimi.Name = "radioButtonKrimi";
-            this.radioButtonKrimi.Size = new System.Drawing.Size(47, 17);
-            this.radioButtonKrimi.TabIndex = 5;
-            this.radioButtonKrimi.TabStop = true;
-            this.radioButtonKrimi.Text = "Krimi";
-            this.radioButtonKrimi.UseVisualStyleBackColor = true;
+            this.radioButtonKinder.AutoSize = true;
+            this.radioButtonKinder.Location = new System.Drawing.Point(62, 42);
+            this.radioButtonKinder.Name = "radioButtonKinder";
+            this.radioButtonKinder.Size = new System.Drawing.Size(55, 17);
+            this.radioButtonKinder.TabIndex = 3;
+            this.radioButtonKinder.TabStop = true;
+            this.radioButtonKinder.Text = "Kinder";
+            this.radioButtonKinder.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonAction
+            // 
+            this.radioButtonAction.AutoSize = true;
+            this.radioButtonAction.Location = new System.Drawing.Point(1, 42);
+            this.radioButtonAction.Name = "radioButtonAction";
+            this.radioButtonAction.Size = new System.Drawing.Size(55, 17);
+            this.radioButtonAction.TabIndex = 2;
+            this.radioButtonAction.TabStop = true;
+            this.radioButtonAction.Text = "Action";
+            this.radioButtonAction.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonThriller
+            // 
+            this.radioButtonThriller.AutoSize = true;
+            this.radioButtonThriller.Location = new System.Drawing.Point(62, 19);
+            this.radioButtonThriller.Name = "radioButtonThriller";
+            this.radioButtonThriller.Size = new System.Drawing.Size(56, 17);
+            this.radioButtonThriller.TabIndex = 1;
+            this.radioButtonThriller.TabStop = true;
+            this.radioButtonThriller.Text = "Thriller";
+            this.radioButtonThriller.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonDrama
+            // 
+            this.radioButtonDrama.AutoSize = true;
+            this.radioButtonDrama.Location = new System.Drawing.Point(0, 19);
+            this.radioButtonDrama.Name = "radioButtonDrama";
+            this.radioButtonDrama.Size = new System.Drawing.Size(56, 17);
+            this.radioButtonDrama.TabIndex = 0;
+            this.radioButtonDrama.TabStop = true;
+            this.radioButtonDrama.Text = "Drama";
+            this.radioButtonDrama.UseVisualStyleBackColor = true;
+            // 
+            // listViewMovie
+            // 
+            this.listViewMovie.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.listViewMovie.Location = new System.Drawing.Point(0, 91);
+            this.listViewMovie.Name = "listViewMovie";
+            this.listViewMovie.Size = new System.Drawing.Size(266, 313);
+            this.listViewMovie.TabIndex = 0;
+            this.listViewMovie.UseCompatibleStateImageBehavior = false;
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(530, 404);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
             // 
             // FormMain
             // 
@@ -244,10 +244,10 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBoxGenre.ResumeLayout(false);
             this.groupBoxGenre.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -21,6 +21,7 @@ namespace Videoverwaltung.Resources
         {
             this.Name = Path.GetFileName(moviepath);
             this.MoviePath = moviepath;
+            ReadMovieDir();
         }
 
         public Movie(string name, string regisseur, TimeSpan duration, string moviepath, string mainactor1, string mainactor2)
@@ -37,6 +38,7 @@ namespace Videoverwaltung.Resources
         public string Name { get; set; }
         public string  Regisseur { get; set; }
         public string  MoviePath { get; set; }
+        public string MovieFile { get; set; }
         public TimeSpan Duration { get; set; }
         //public List<string> Cast { get; set; }
         public string MainActor1 { get; set; }
@@ -47,12 +49,17 @@ namespace Videoverwaltung.Resources
 
         private void ReadMovieDir()
         {
-            List<string> ext = new List<string>() { ".jpg", ".png", ".bmp", ".gif" };
-            foreach (string file in Directory.EnumerateFiles(MoviePath))
+            List<string> extPic = new List<string>() { ".jpg", ".png", ".bmp", ".gif" };
+            List<string> extVid = new List<string>() { ".mp4", ".avi" };
+            foreach (string file in Directory.EnumerateFiles(this.MoviePath))
             {
-                if (ext.Contains(Path.GetExtension(file)))
+                if (extPic.Contains(Path.GetExtension(file)))
                 {
                     PicSave(file);
+                }
+                if (extVid.Contains(Path.GetExtension(file)))
+                {
+                    this.MovieFile = file;
                 }
             }
         }
