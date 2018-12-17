@@ -162,6 +162,7 @@
             this.listViewMovie.UseCompatibleStateImageBehavior = false;
             this.listViewMovie.View = System.Windows.Forms.View.Details;
             this.listViewMovie.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listViewMovie_MouseClick);
+            this.listViewMovie.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewMovie_MouseDoubleClick);
             // 
             // columnHeaderMovieName
             // 

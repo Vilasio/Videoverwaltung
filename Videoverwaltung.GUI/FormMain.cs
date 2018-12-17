@@ -191,5 +191,13 @@ namespace Videoverwaltung.GUI
             formVideoDetail.ShowDialog();
             
         }
+
+        private void listViewMovie_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewItem item = this.listViewMovie.GetItemAt(e.X,e.Y);
+            Movie movieEdit = (Movie)item.Tag;
+            FormVideoDetail formVideoDetail = new FormVideoDetail(movieEdit,genres);
+            formVideoDetail.ShowDialog();
+        }
     }
 }
