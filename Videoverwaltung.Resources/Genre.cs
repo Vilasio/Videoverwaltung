@@ -8,6 +8,7 @@ using System.IO;
 
 namespace Videoverwaltung.Resources
 {
+    [Serializable]
     public class Genre
     {
         

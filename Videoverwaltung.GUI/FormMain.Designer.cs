@@ -35,16 +35,20 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.StatusLabelUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.comboBoxGenre = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBoxGenre = new System.Windows.Forms.GroupBox();
-            this.radioButtonKrimi = new System.Windows.Forms.RadioButton();
-            this.radioButtonDoku = new System.Windows.Forms.RadioButton();
-            this.radioButtonKinder = new System.Windows.Forms.RadioButton();
-            this.radioButtonAction = new System.Windows.Forms.RadioButton();
-            this.radioButtonThriller = new System.Windows.Forms.RadioButton();
-            this.radioButtonDrama = new System.Windows.Forms.RadioButton();
             this.listViewMovie = new System.Windows.Forms.ListView();
+            this.columnHeaderMovieName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDuratio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBoxSearch = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hinzufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -52,14 +56,14 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBoxGenre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.programmToolStripMenuItem});
+            this.programmToolStripMenuItem,
+            this.editToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -69,6 +73,10 @@
             // programmToolStripMenuItem
             // 
             this.programmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.importToolStripMenuItem,
+            this.toolStripSeparator1,
             this.MenuItemExit});
             this.programmToolStripMenuItem.Name = "programmToolStripMenuItem";
             this.programmToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
@@ -78,7 +86,7 @@
             // 
             this.MenuItemExit.Name = "MenuItemExit";
             this.MenuItemExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.MenuItemExit.Size = new System.Drawing.Size(134, 22);
+            this.MenuItemExit.Size = new System.Drawing.Size(180, 22);
             this.MenuItemExit.Text = "Exit";
             this.MenuItemExit.Click += new System.EventHandler(this.MenuItemExit_Click);
             // 
@@ -106,8 +114,10 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBoxSearch);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBoxGenre);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.groupBoxGenre);
             this.splitContainer1.Panel1.Controls.Add(this.listViewMovie);
             // 
             // splitContainer1.Panel2
@@ -117,103 +127,50 @@
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 2;
             // 
+            // comboBoxGenre
+            // 
+            this.comboBoxGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGenre.FormattingEnabled = true;
+            this.comboBoxGenre.Location = new System.Drawing.Point(6, 16);
+            this.comboBoxGenre.Name = "comboBoxGenre";
+            this.comboBoxGenre.Size = new System.Drawing.Size(140, 21);
+            this.comboBoxGenre.TabIndex = 3;
+            this.comboBoxGenre.SelectedIndexChanged += new System.EventHandler(this.comboBoxGenre_SelectedIndexChanged);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(145, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(121, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // groupBoxGenre
-            // 
-            this.groupBoxGenre.Controls.Add(this.radioButtonKrimi);
-            this.groupBoxGenre.Controls.Add(this.radioButtonDoku);
-            this.groupBoxGenre.Controls.Add(this.radioButtonKinder);
-            this.groupBoxGenre.Controls.Add(this.radioButtonAction);
-            this.groupBoxGenre.Controls.Add(this.radioButtonThriller);
-            this.groupBoxGenre.Controls.Add(this.radioButtonDrama);
-            this.groupBoxGenre.Location = new System.Drawing.Point(5, -1);
-            this.groupBoxGenre.Name = "groupBoxGenre";
-            this.groupBoxGenre.Size = new System.Drawing.Size(143, 92);
-            this.groupBoxGenre.TabIndex = 1;
-            this.groupBoxGenre.TabStop = false;
-            this.groupBoxGenre.Text = "Genre";
-            // 
-            // radioButtonKrimi
-            // 
-            this.radioButtonKrimi.AutoSize = true;
-            this.radioButtonKrimi.Location = new System.Drawing.Point(62, 65);
-            this.radioButtonKrimi.Name = "radioButtonKrimi";
-            this.radioButtonKrimi.Size = new System.Drawing.Size(47, 17);
-            this.radioButtonKrimi.TabIndex = 5;
-            this.radioButtonKrimi.TabStop = true;
-            this.radioButtonKrimi.Text = "Krimi";
-            this.radioButtonKrimi.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonDoku
-            // 
-            this.radioButtonDoku.AutoSize = true;
-            this.radioButtonDoku.Location = new System.Drawing.Point(1, 65);
-            this.radioButtonDoku.Name = "radioButtonDoku";
-            this.radioButtonDoku.Size = new System.Drawing.Size(51, 17);
-            this.radioButtonDoku.TabIndex = 4;
-            this.radioButtonDoku.TabStop = true;
-            this.radioButtonDoku.Text = "Doku";
-            this.radioButtonDoku.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonKinder
-            // 
-            this.radioButtonKinder.AutoSize = true;
-            this.radioButtonKinder.Location = new System.Drawing.Point(62, 42);
-            this.radioButtonKinder.Name = "radioButtonKinder";
-            this.radioButtonKinder.Size = new System.Drawing.Size(55, 17);
-            this.radioButtonKinder.TabIndex = 3;
-            this.radioButtonKinder.TabStop = true;
-            this.radioButtonKinder.Text = "Kinder";
-            this.radioButtonKinder.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonAction
-            // 
-            this.radioButtonAction.AutoSize = true;
-            this.radioButtonAction.Location = new System.Drawing.Point(1, 42);
-            this.radioButtonAction.Name = "radioButtonAction";
-            this.radioButtonAction.Size = new System.Drawing.Size(55, 17);
-            this.radioButtonAction.TabIndex = 2;
-            this.radioButtonAction.TabStop = true;
-            this.radioButtonAction.Text = "Action";
-            this.radioButtonAction.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonThriller
-            // 
-            this.radioButtonThriller.AutoSize = true;
-            this.radioButtonThriller.Location = new System.Drawing.Point(62, 19);
-            this.radioButtonThriller.Name = "radioButtonThriller";
-            this.radioButtonThriller.Size = new System.Drawing.Size(56, 17);
-            this.radioButtonThriller.TabIndex = 1;
-            this.radioButtonThriller.TabStop = true;
-            this.radioButtonThriller.Text = "Thriller";
-            this.radioButtonThriller.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonDrama
-            // 
-            this.radioButtonDrama.AutoSize = true;
-            this.radioButtonDrama.Location = new System.Drawing.Point(0, 19);
-            this.radioButtonDrama.Name = "radioButtonDrama";
-            this.radioButtonDrama.Size = new System.Drawing.Size(56, 17);
-            this.radioButtonDrama.TabIndex = 0;
-            this.radioButtonDrama.TabStop = true;
-            this.radioButtonDrama.Text = "Drama";
-            this.radioButtonDrama.UseVisualStyleBackColor = true;
-            // 
             // listViewMovie
             // 
+            this.listViewMovie.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderMovieName,
+            this.columnHeaderDuratio});
             this.listViewMovie.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.listViewMovie.FullRowSelect = true;
+            this.listViewMovie.GridLines = true;
+            this.listViewMovie.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewMovie.Location = new System.Drawing.Point(0, 91);
             this.listViewMovie.Name = "listViewMovie";
             this.listViewMovie.Size = new System.Drawing.Size(266, 313);
             this.listViewMovie.TabIndex = 0;
             this.listViewMovie.UseCompatibleStateImageBehavior = false;
+            this.listViewMovie.View = System.Windows.Forms.View.Details;
+            this.listViewMovie.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listViewMovie_MouseClick);
+            // 
+            // columnHeaderMovieName
+            // 
+            this.columnHeaderMovieName.Text = "Name";
+            this.columnHeaderMovieName.Width = 200;
+            // 
+            // columnHeaderDuratio
+            // 
+            this.columnHeaderDuratio.Text = "Duration";
             // 
             // axWindowsMediaPlayer1
             // 
@@ -225,6 +182,69 @@
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(530, 404);
             this.axWindowsMediaPlayer1.TabIndex = 0;
             // 
+            // importToolStripMenuItem
+            // 
+            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+            this.importToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importToolStripMenuItem.Text = "Import";
+            this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
+            // 
+            // comboBoxSearch
+            // 
+            this.comboBoxSearch.FormattingEnabled = true;
+            this.comboBoxSearch.Location = new System.Drawing.Point(6, 56);
+            this.comboBoxSearch.Name = "comboBoxSearch";
+            this.comboBoxSearch.Size = new System.Drawing.Size(138, 21);
+            this.comboBoxSearch.TabIndex = 4;
+            this.comboBoxSearch.Text = "Search";
+            this.comboBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxSearch_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Genre";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hinzufügenToolStripMenuItem});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // hinzufügenToolStripMenuItem
+            // 
+            this.hinzufügenToolStripMenuItem.Name = "hinzufügenToolStripMenuItem";
+            this.hinzufügenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hinzufügenToolStripMenuItem.Text = "Hinzufügen";
+            this.hinzufügenToolStripMenuItem.Click += new System.EventHandler(this.hinzufügenToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,18 +255,17 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
-            this.Text = "Form1";
+            this.Text = "Videoverwaltung";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBoxGenre.ResumeLayout(false);
-            this.groupBoxGenre.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,15 +281,19 @@
         private System.Windows.Forms.ToolStripStatusLabel StatusLabelUser;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBoxGenre;
-        private System.Windows.Forms.RadioButton radioButtonKrimi;
-        private System.Windows.Forms.RadioButton radioButtonDoku;
-        private System.Windows.Forms.RadioButton radioButtonKinder;
-        private System.Windows.Forms.RadioButton radioButtonAction;
-        private System.Windows.Forms.RadioButton radioButtonThriller;
-        private System.Windows.Forms.RadioButton radioButtonDrama;
         private System.Windows.Forms.ListView listViewMovie;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.ComboBox comboBoxGenre;
+        private System.Windows.Forms.ColumnHeader columnHeaderMovieName;
+        private System.Windows.Forms.ColumnHeader columnHeaderDuratio;
+        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBoxSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hinzufügenToolStripMenuItem;
     }
 }
 

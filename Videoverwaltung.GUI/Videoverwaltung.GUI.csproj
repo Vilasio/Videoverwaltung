@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,10 +54,28 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVideoDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideoDetail.Designer.cs">
+      <DependentUpon>FormVideoDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MovieInfo.Designer.cs">
+      <DependentUpon>MovieInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideoDetail.resx">
+      <DependentUpon>FormVideoDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieInfo.resx">
+      <DependentUpon>MovieInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

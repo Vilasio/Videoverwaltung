@@ -9,6 +9,7 @@ using System.Drawing.Imaging;
 
 namespace Videoverwaltung.Resources
 {
+    [Serializable]
     public class Movie
     {
         public Movie()
