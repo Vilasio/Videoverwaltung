@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Videoverwaltung.Resources;
 using System.Windows.Controls;
 using System.Xml.Serialization;
+using System.Configuration;
 
 namespace Videoverwaltung.GUI
 {
@@ -30,11 +31,21 @@ namespace Videoverwaltung.GUI
 
 
 
-        public FormMain(string basePath)
+        public FormMain()
         {
             #region InitializeComponents and Building up the GenreList
             InitializeComponent();
             //Path of MediaCollection--------------------------------------------------------------------------------
+            string basePath = ConfigurationManager.AppSettings["Basepath"];
+            if (basePath == "none")
+            {
+                FormBasePath formBasePath = new FormBasePath();
+                if (formBasePath.ShowDialog() == DialogResult.OK)
+                {
+                    basePath = formBasePath.Path;
+                }
+            }
+           
             this.basePath = basePath;
             //Building up the Mediacollection----------------------------------------------------------------------------------
             ReadFileSystem(basePath);
